@@ -3,9 +3,12 @@ import cv2
 import numpy as np
 from PIL import Image
 
-# Page configuration
+
 st.set_page_config(page_title="Image Wizard", layout="centered", page_icon="🖼️")
 st.title("🖼️ Image Wizard - Quick Image Processing")
+
+st.markdown("<h4 style='text-align: center'><b>Name: Aryan Anil Pawar &nbsp;&nbsp; Reg No: 229301788</b></h4>", unsafe_allow_html=True)
+
 
 st.markdown("""
 <style>
@@ -22,7 +25,7 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar for uploading
+
 st.sidebar.header("Upload Image")
 uploaded_file = st.sidebar.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
@@ -31,7 +34,7 @@ if uploaded_file:
     img_array = np.array(image)
     st.image(image, caption="Original Image", use_column_width=True)
 
-    # Select operation
+   
     st.sidebar.markdown("---")
     st.sidebar.header("Choose Operation")
     operation = st.sidebar.selectbox("Select Processing Type", [
